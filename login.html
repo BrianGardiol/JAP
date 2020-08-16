@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
-<html lang="en">
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>Iniciar Sesión - eMercado</title>
  <link rel="stylesheet" href="css/login.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Tamma+2">
+ <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <form class="signin">
-    <img src="img/login.png" alt="" width="100%">
+<div class="content">
+  <form class="signin" id="form">
+    <img src="img/login.png" alt="" width="100%" style="border-radius: 5px;">
     <br><br>
-    <input type="email" class="email form" name="userid" placeholder="Email" required autofocus>
-    <input type="password" class="contrasena form" name="password" placeholder="Contraseña" required>
-    <input type="button" class="boton" onclick="check(this.form)" type="submit" value="Iniciar Sesión"> 
-    <p>&copy; 2020</p>
+    <input type="email" class="email form" name="userid" placeholder="Email" autofocus>
+    <input type="password" class="contrasena form" name="password" placeholder="Contraseña">
+    <p id="campovacio"></p>
+    <input type="button" class="boton" value="Iniciar Sesión" onclick="check(form)"> 
+    <p id="copy">&copy; 2020</p>
   </form>
+  </div>
   <script type="text/javascript" src="js/login.js"></script>
+  <script>
+    ///Desactiva la barra espaciadora
+    document.addEventListener('keydown', function(e) {    
+    if (e.which === 32) {
+      e.preventDefault();
+    }
+  });
+  </script>
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
 </body>
 </html>
