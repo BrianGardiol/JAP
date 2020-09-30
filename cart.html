@@ -35,22 +35,58 @@
 
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-    </div>
-  </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+    <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+    <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+    <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+    <div class="dropdown">
+      <button class="py-2 d-none d-md-inline-block dropbtn" id="usuario" onclick="myFunction()">
+      </button>
+      <div class="dropdown-content" id="myDropdown">
+        <a href="my-profile.html">Mi perfil</a>
+        <a href="cart.html">Ver mi carrito</a>
+        <a id="salir" href=login.html>Cerrar sesión</a>
+      </div>
     </div>
   </div>
+</nav>
+<br>
+<br>
+<div class="text-center p-4">
+  <h2>Carrito de compras</h2>
+</div>
+<br>
+<div class="container">
+  <div class="row" id="cat-list-container">
+    <div class="list-group-item list-group-item-action">
+      <div class="row">
+          <div class="col-3">
+          </div>
+          <div class="col" style="display: flex;
+          justify-content:center;
+          align-items:center;">
+              <div class="d-flex w-100 justify-content-between">
+              <div style="width:326.4px;">
+              <h5 style="font-weight: bold; margin-bottom: 0px;">Artículo</h5>
+              </div>
+              <div style= "width: 161px; text-align: center;">
+              <h5 style="font-weight: bold; margin-bottom: 0px;">Valor unitario</h5>
+              </div>
+              <div style="width: 161px; text-align: center;">
+                <h5 style="font-weight: bold; margin-bottom: 0px;">Cantidad</h5>
+              </div>
+              <div style="width:161px; text-align:center;">
+              <h5 style="font-weight: bold; margin-bottom: 0px;">Valor total</h5>
+              </div>
+              </div>
+              </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+</div>
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
